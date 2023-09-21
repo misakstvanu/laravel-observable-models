@@ -1,8 +1,9 @@
 namespace misakstvanu;
 
+/**
+* @property array $observers
+*/
 trait HasObservers {
-
-    protected static array $observers = [];
 
     public static function bootHasObservers() :void {
         if(!empty(static::$observers)) 
