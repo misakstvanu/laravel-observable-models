@@ -1,0 +1,49 @@
+{
+    "name": "misakstvanu/laravel-observable-models",
+    "description": "Why not register observers directly on the models?",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "misakstvanu\\LaravelObservableModels\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michal Štván",
+            "email": "michalstvan@gmail.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/misakstvanu/laravel-observable-models"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "illuminate/database": "^9.0|^10.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.15",
+        "laravel/pint": "^1.11",
+        "phpstan/phpstan": "^1.10",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^8.9",
+        "pestphp/pest-plugin-faker": "^2.0"
+    },
+    "scripts": {
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "test:unit": "./vendor/bin/pest --order-by random",
+        "test:static": "phpstan analyse",
+        "test": [
+            "@test:lint",
+            "@test:unit",
+            "@test:static"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
